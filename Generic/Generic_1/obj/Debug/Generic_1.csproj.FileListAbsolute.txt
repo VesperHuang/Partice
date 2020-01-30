@@ -1,0 +1,7 @@
+D:\WorkSpace\Generic\Generic_1\bin\Debug\Generic_1.exe.config
+D:\WorkSpace\Generic\Generic_1\bin\Debug\Generic_1.exe
+D:\WorkSpace\Generic\Generic_1\bin\Debug\Generic_1.pdb
+D:\WorkSpace\Generic\Generic_1\obj\Debug\Generic_1.csprojAssemblyReference.cache
+D:\WorkSpace\Generic\Generic_1\obj\Debug\Generic_1.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Generic\Generic_1\obj\Debug\Generic_1.exe
+D:\WorkSpace\Generic\Generic_1\obj\Debug\Generic_1.pdb

@@ -1,0 +1,7 @@
+D:\WorkSpace\Initializer\Initializer_1\bin\Debug\Initializer_1.exe.config
+D:\WorkSpace\Initializer\Initializer_1\bin\Debug\Initializer_1.exe
+D:\WorkSpace\Initializer\Initializer_1\bin\Debug\Initializer_1.pdb
+D:\WorkSpace\Initializer\Initializer_1\obj\Debug\Initializer_1.csprojAssemblyReference.cache
+D:\WorkSpace\Initializer\Initializer_1\obj\Debug\Initializer_1.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Initializer\Initializer_1\obj\Debug\Initializer_1.exe
+D:\WorkSpace\Initializer\Initializer_1\obj\Debug\Initializer_1.pdb

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UserCenterModelStoreContainer" CdmEntityContainer="UserCenterEntities">
+    <EntitySetMapping Name="SystemCodes">
+      <EntityTypeMapping TypeName="UserCenterModel.SystemCode">
+        <MappingFragment StoreEntitySet="SystemCode">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sys_Code" ColumnName="Sys_Code" />
+          <ScalarProperty Name="Sys_Name" ColumnName="Sys_Name" />
+          <ScalarProperty Name="Sys_ItemValue" ColumnName="Sys_ItemValue" />
+          <ScalarProperty Name="Sys_ItemName" ColumnName="Sys_ItemName" />
+          <ScalarProperty Name="Ins_DateTime" ColumnName="Ins_DateTime" />
+          <ScalarProperty Name="Ins_UserID" ColumnName="Ins_UserID" />
+          <ScalarProperty Name="Mdy_DateTime" ColumnName="Mdy_DateTime" />
+          <ScalarProperty Name="Mdy_UserID" ColumnName="Mdy_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTables">
+      <EntityTypeMapping TypeName="UserCenterModel.UserTable">
+        <MappingFragment StoreEntitySet="UserTable">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+          <ScalarProperty Name="User_NO" ColumnName="User_NO" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="User_AD_ID" ColumnName="User_AD_ID" />
+          <ScalarProperty Name="User_Pwd" ColumnName="User_Pwd" />
+          <ScalarProperty Name="User_CivilizID" ColumnName="User_CivilizID" />
+          <ScalarProperty Name="User_GroupID" ColumnName="User_GroupID" />
+          <ScalarProperty Name="User_CnName" ColumnName="User_CnName" />
+          <ScalarProperty Name="User_EnName" ColumnName="User_EnName" />
+          <ScalarProperty Name="User_Birthday" ColumnName="User_Birthday" />
+          <ScalarProperty Name="User_SectionID" ColumnName="User_SectionID" />
+          <ScalarProperty Name="Ins_DateTime" ColumnName="Ins_DateTime" />
+          <ScalarProperty Name="Ins_UserID" ColumnName="Ins_UserID" />
+          <ScalarProperty Name="Mdy_DateTime" ColumnName="Mdy_DateTime" />
+          <ScalarProperty Name="Mdy_UserID" ColumnName="Mdy_UserID" />
+          <ScalarProperty Name="REMK" ColumnName="REMK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Area_Rule">
+      <EntityTypeMapping TypeName="UserCenterModel.Area_Rule">
+        <MappingFragment StoreEntitySet="Area_Rule">
+          <ScalarProperty Name="Mdy_UserID" ColumnName="Mdy_UserID" />
+          <ScalarProperty Name="Mdy_DateTime" ColumnName="Mdy_DateTime" />
+          <ScalarProperty Name="Ins_UserID" ColumnName="Ins_UserID" />
+          <ScalarProperty Name="Ins_DateTime" ColumnName="Ins_DateTime" />
+          <ScalarProperty Name="Area_User_NO" ColumnName="Area_User_NO" />
+          <ScalarProperty Name="Area_School_TypeID" ColumnName="Area_School_TypeID" />
+          <ScalarProperty Name="Area_ID" ColumnName="Area_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

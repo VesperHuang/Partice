@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UserCenterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'UserCenter.dbo.Area_Rule' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Area_Rule">
+          <Key>
+            <PropertyRef Name="Area_ID" />
+            <PropertyRef Name="Area_School_TypeID" />
+            <PropertyRef Name="Area_User_NO" />
+          </Key>
+          <Property Name="Area_ID" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Area_School_TypeID" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Area_User_NO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Ins_DateTime" Type="datetime" />
+          <Property Name="Ins_UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mdy_DateTime" Type="datetime" />
+          <Property Name="Mdy_UserID" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SystemCode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sys_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sys_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Sys_ItemValue" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Sys_ItemName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Ins_DateTime" Type="datetime" />
+          <Property Name="Ins_UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mdy_DateTime" Type="datetime" />
+          <Property Name="Mdy_UserID" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="User_NO" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_Type" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="User_NO" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="User_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="User_AD_ID" Type="nvarchar" MaxLength="20" />
+          <Property Name="User_Pwd" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="User_CivilizID" Type="nvarchar" MaxLength="10" />
+          <Property Name="User_GroupID" Type="nvarchar" MaxLength="2" />
+          <Property Name="User_CnName" Type="nvarchar" MaxLength="20" />
+          <Property Name="User_EnName" Type="nvarchar" MaxLength="20" />
+          <Property Name="User_Birthday" Type="nvarchar" MaxLength="40" />
+          <Property Name="User_SectionID" Type="nvarchar" MaxLength="2" />
+          <Property Name="Ins_DateTime" Type="datetime" />
+          <Property Name="Ins_UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="Mdy_DateTime" Type="datetime" />
+          <Property Name="Mdy_UserID" Type="nvarchar" MaxLength="20" />
+          <Property Name="REMK" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="UserCenterModelStoreContainer">
+          <EntitySet Name="SystemCode" EntityType="Self.SystemCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Area_Rule" EntityType="Self.Area_Rule" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Area_Rule].[Area_ID] AS [Area_ID], 
+    [Area_Rule].[Area_School_TypeID] AS [Area_School_TypeID], 
+    [Area_Rule].[Area_User_NO] AS [Area_User_NO], 
+    [Area_Rule].[Ins_DateTime] AS [Ins_DateTime], 
+    [Area_Rule].[Ins_UserID] AS [Ins_UserID], 
+    [Area_Rule].[Mdy_DateTime] AS [Mdy_DateTime], 
+    [Area_Rule].[Mdy_UserID] AS [Mdy_UserID]
+    FROM [dbo].[Area_Rule] AS [Area_Rule]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UserCenterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SystemCode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sys_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sys_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sys_ItemValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sys_ItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ins_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Ins_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mdy_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Mdy_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="User_NO" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_NO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_AD_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User_Pwd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User_CivilizID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="User_GroupID" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="User_CnName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User_EnName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User_Birthday" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="User_SectionID" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Ins_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Ins_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mdy_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Mdy_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="REMK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="UserCenterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SystemCodes" EntityType="Self.SystemCode" />
+          <EntitySet Name="UserTables" EntityType="Self.UserTable" />
+          <EntitySet Name="Area_Rule" EntityType="UserCenterModel.Area_Rule" />
+        </EntityContainer>
+        <EntityType Name="Area_Rule">
+          <Key>
+            <PropertyRef Name="Area_ID" />
+            <PropertyRef Name="Area_School_TypeID" />
+            <PropertyRef Name="Area_User_NO" />
+          </Key>
+          <Property Name="Area_ID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Area_School_TypeID" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Area_User_NO" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ins_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Ins_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mdy_DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Mdy_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UserCenterModelStoreContainer" CdmEntityContainer="UserCenterEntities">
+          <EntitySetMapping Name="SystemCodes">
+            <EntityTypeMapping TypeName="UserCenterModel.SystemCode">
+              <MappingFragment StoreEntitySet="SystemCode">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Sys_Code" ColumnName="Sys_Code" />
+                <ScalarProperty Name="Sys_Name" ColumnName="Sys_Name" />
+                <ScalarProperty Name="Sys_ItemValue" ColumnName="Sys_ItemValue" />
+                <ScalarProperty Name="Sys_ItemName" ColumnName="Sys_ItemName" />
+                <ScalarProperty Name="Ins_DateTime" ColumnName="Ins_DateTime" />
+                <ScalarProperty Name="Ins_UserID" ColumnName="Ins_UserID" />
+                <ScalarProperty Name="Mdy_DateTime" ColumnName="Mdy_DateTime" />
+                <ScalarProperty Name="Mdy_UserID" ColumnName="Mdy_UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTables">
+            <EntityTypeMapping TypeName="UserCenterModel.UserTable">
+              <MappingFragment StoreEntitySet="UserTable">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+                <ScalarProperty Name="User_NO" ColumnName="User_NO" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="User_AD_ID" ColumnName="User_AD_ID" />
+                <ScalarProperty Name="User_Pwd" ColumnName="User_Pwd" />
+                <ScalarProperty Name="User_CivilizID" ColumnName="User_CivilizID" />
+                <ScalarProperty Name="User_GroupID" ColumnName="User_GroupID" />
+                <ScalarProperty Name="User_CnName" ColumnName="User_CnName" />
+                <ScalarProperty Name="User_EnName" ColumnName="User_EnName" />
+                <ScalarProperty Name="User_Birthday" ColumnName="User_Birthday" />
+                <ScalarProperty Name="User_SectionID" ColumnName="User_SectionID" />
+                <ScalarProperty Name="Ins_DateTime" ColumnName="Ins_DateTime" />
+                <ScalarProperty Name="Ins_UserID" ColumnName="Ins_UserID" />
+                <ScalarProperty Name="Mdy_DateTime" ColumnName="Mdy_DateTime" />
+                <ScalarProperty Name="Mdy_UserID" ColumnName="Mdy_UserID" />
+                <ScalarProperty Name="REMK" ColumnName="REMK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Area_Rule">
+            <EntityTypeMapping TypeName="UserCenterModel.Area_Rule">
+              <MappingFragment StoreEntitySet="Area_Rule">
+                <ScalarProperty Name="Mdy_UserID" ColumnName="Mdy_UserID" />
+                <ScalarProperty Name="Mdy_DateTime" ColumnName="Mdy_DateTime" />
+                <ScalarProperty Name="Ins_UserID" ColumnName="Ins_UserID" />
+                <ScalarProperty Name="Ins_DateTime" ColumnName="Ins_DateTime" />
+                <ScalarProperty Name="Area_User_NO" ColumnName="Area_User_NO" />
+                <ScalarProperty Name="Area_School_TypeID" ColumnName="Area_School_TypeID" />
+                <ScalarProperty Name="Area_ID" ColumnName="Area_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

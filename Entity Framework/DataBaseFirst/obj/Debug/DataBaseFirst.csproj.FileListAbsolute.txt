@@ -1,0 +1,13 @@
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\DataBaseFirst.exe.config
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\DataBaseFirst.exe
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\DataBaseFirst.pdb
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\EntityFramework.dll
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\EntityFramework.SqlServer.dll
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\EntityFramework.xml
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\EntityFramework.SqlServer.xml
+D:\WorkSpace\Entity Framework\DataBaseFirst\bin\Debug\zh-Hant\EntityFramework.resources.dll
+D:\WorkSpace\Entity Framework\DataBaseFirst\obj\Debug\DataBaseFirst.csprojAssemblyReference.cache
+D:\WorkSpace\Entity Framework\DataBaseFirst\obj\Debug\DataBaseFirst.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Entity Framework\DataBaseFirst\obj\Debug\DataBaseFirst.csproj.CopyComplete
+D:\WorkSpace\Entity Framework\DataBaseFirst\obj\Debug\DataBaseFirst.exe
+D:\WorkSpace\Entity Framework\DataBaseFirst\obj\Debug\DataBaseFirst.pdb

@@ -1,0 +1,7 @@
+D:\WorkSpace\Refiection\Refiection_Practice\bin\Debug\Refiection_Practice.exe.config
+D:\WorkSpace\Refiection\Refiection_Practice\bin\Debug\Refiection_Practice.exe
+D:\WorkSpace\Refiection\Refiection_Practice\bin\Debug\Refiection_Practice.pdb
+D:\WorkSpace\Refiection\Refiection_Practice\obj\Debug\Refiection_Practice.csprojAssemblyReference.cache
+D:\WorkSpace\Refiection\Refiection_Practice\obj\Debug\Refiection_Practice.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Refiection\Refiection_Practice\obj\Debug\Refiection_Practice.exe
+D:\WorkSpace\Refiection\Refiection_Practice\obj\Debug\Refiection_Practice.pdb

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UserCenterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'UserCenter.dbo.Area_Rule' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="Area_Rule">
+    <Key>
+      <PropertyRef Name="Area_ID" />
+      <PropertyRef Name="Area_School_TypeID" />
+      <PropertyRef Name="Area_User_NO" />
+    </Key>
+    <Property Name="Area_ID" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="Area_School_TypeID" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="Area_User_NO" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ins_DateTime" Type="datetime" />
+    <Property Name="Ins_UserID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mdy_DateTime" Type="datetime" />
+    <Property Name="Mdy_UserID" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="SystemCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sys_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sys_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sys_ItemValue" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sys_ItemName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ins_DateTime" Type="datetime" />
+    <Property Name="Ins_UserID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mdy_DateTime" Type="datetime" />
+    <Property Name="Mdy_UserID" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="User_NO" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Type" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="User_NO" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="User_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="User_AD_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="User_Pwd" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="User_CivilizID" Type="nvarchar" MaxLength="10" />
+    <Property Name="User_GroupID" Type="nvarchar" MaxLength="2" />
+    <Property Name="User_CnName" Type="nvarchar" MaxLength="20" />
+    <Property Name="User_EnName" Type="nvarchar" MaxLength="20" />
+    <Property Name="User_Birthday" Type="nvarchar" MaxLength="40" />
+    <Property Name="User_SectionID" Type="nvarchar" MaxLength="2" />
+    <Property Name="Ins_DateTime" Type="datetime" />
+    <Property Name="Ins_UserID" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mdy_DateTime" Type="datetime" />
+    <Property Name="Mdy_UserID" Type="nvarchar" MaxLength="20" />
+    <Property Name="REMK" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="UserCenterModelStoreContainer">
+    <EntitySet Name="SystemCode" EntityType="Self.SystemCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Area_Rule" EntityType="Self.Area_Rule" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Area_Rule].[Area_ID] AS [Area_ID], 
+    [Area_Rule].[Area_School_TypeID] AS [Area_School_TypeID], 
+    [Area_Rule].[Area_User_NO] AS [Area_User_NO], 
+    [Area_Rule].[Ins_DateTime] AS [Ins_DateTime], 
+    [Area_Rule].[Ins_UserID] AS [Ins_UserID], 
+    [Area_Rule].[Mdy_DateTime] AS [Mdy_DateTime], 
+    [Area_Rule].[Mdy_UserID] AS [Mdy_UserID]
+    FROM [dbo].[Area_Rule] AS [Area_Rule]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

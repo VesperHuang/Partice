@@ -1,0 +1,7 @@
+D:\WorkSpace\Preprocessor\Preprocessor_1\bin\Debug\Preprocessor_1.exe.config
+D:\WorkSpace\Preprocessor\Preprocessor_1\bin\Debug\Preprocessor_1.exe
+D:\WorkSpace\Preprocessor\Preprocessor_1\bin\Debug\Preprocessor_1.pdb
+D:\WorkSpace\Preprocessor\Preprocessor_1\obj\Debug\Preprocessor_1.csprojAssemblyReference.cache
+D:\WorkSpace\Preprocessor\Preprocessor_1\obj\Debug\Preprocessor_1.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Preprocessor\Preprocessor_1\obj\Debug\Preprocessor_1.exe
+D:\WorkSpace\Preprocessor\Preprocessor_1\obj\Debug\Preprocessor_1.pdb

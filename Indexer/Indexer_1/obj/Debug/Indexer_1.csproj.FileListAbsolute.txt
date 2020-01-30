@@ -1,0 +1,7 @@
+D:\WorkSpace\Indexer\Indexer_1\obj\Debug\Indexer_1.csprojAssemblyReference.cache
+D:\WorkSpace\Indexer\Indexer_1\obj\Debug\Indexer_1.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Indexer\Indexer_1\bin\Debug\Indexer_1.exe.config
+D:\WorkSpace\Indexer\Indexer_1\bin\Debug\Indexer_1.exe
+D:\WorkSpace\Indexer\Indexer_1\bin\Debug\Indexer_1.pdb
+D:\WorkSpace\Indexer\Indexer_1\obj\Debug\Indexer_1.exe
+D:\WorkSpace\Indexer\Indexer_1\obj\Debug\Indexer_1.pdb

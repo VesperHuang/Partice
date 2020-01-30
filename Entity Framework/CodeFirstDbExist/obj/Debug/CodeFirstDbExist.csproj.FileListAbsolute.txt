@@ -1,0 +1,13 @@
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\CodeFirstDbExist.exe.config
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\CodeFirstDbExist.exe
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\CodeFirstDbExist.pdb
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\EntityFramework.dll
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\EntityFramework.SqlServer.dll
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\EntityFramework.xml
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\EntityFramework.SqlServer.xml
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\bin\Debug\zh-Hant\EntityFramework.resources.dll
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\obj\Debug\CodeFirstDbExist.csprojAssemblyReference.cache
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\obj\Debug\CodeFirstDbExist.csproj.CoreCompileInputs.cache
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\obj\Debug\CodeFirstDbExist.csproj.CopyComplete
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\obj\Debug\CodeFirstDbExist.exe
+D:\WorkSpace\Entity Framework\CodeFirstDbExist\obj\Debug\CodeFirstDbExist.pdb

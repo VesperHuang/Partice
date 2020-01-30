@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UserCenterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SystemCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sys_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sys_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sys_ItemValue" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sys_ItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ins_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Ins_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mdy_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Mdy_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="User_NO" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="User_NO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="User_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="User_AD_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="User_Pwd" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="User_CivilizID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="User_GroupID" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="User_CnName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="User_EnName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="User_Birthday" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="User_SectionID" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Ins_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Ins_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mdy_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Mdy_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="REMK" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="UserCenterEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SystemCodes" EntityType="Self.SystemCode" />
+    <EntitySet Name="UserTables" EntityType="Self.UserTable" />
+    <EntitySet Name="Area_Rule" EntityType="UserCenterModel.Area_Rule" />
+  </EntityContainer>
+  <EntityType Name="Area_Rule">
+    <Key>
+      <PropertyRef Name="Area_ID" />
+      <PropertyRef Name="Area_School_TypeID" />
+      <PropertyRef Name="Area_User_NO" />
+    </Key>
+    <Property Name="Area_ID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Area_School_TypeID" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Area_User_NO" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Ins_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Ins_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mdy_DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Mdy_UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
